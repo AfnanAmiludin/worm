@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:worm/page/myHomePage.dart';
+import 'package:worm/page/jadwalPage.dart';
+import 'package:worm/page/payment.dart';
+import 'package:worm/page/profile.dart';
 
 void main() {
   runApp(const MyApp());
@@ -7,89 +11,68 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const MyHomePage(),
+      title: 'WOrM',
+      theme: new ThemeData(
+          scaffoldBackgroundColor: const Color.fromRGBO(246, 246, 246, 1),
+          fontFamily: 'Poppins'),
+      home: const toHome(),
+      // initialRoute: '/',
+      // routes: {
+      //   '/': (context) => MyHomePage(),
+      //   '/jadwal': (context) => jadwalPage(),
+      // },
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key}) : super(key: key);
+class toHome extends StatefulWidget {
+  const toHome({Key? key}) : super(key: key);
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<toHome> createState() => _toHomeState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _toHomeState extends State<toHome> {
+  int currentIndex = 0;
+  final screens = [
+    const MyHomePage(),
+    const jadwalPage(),
+    const payment(),
+    const profile(),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("WOrM"),
-      ),
-      body: Column(
-        children: [
-          Container(
-            margin: EdgeInsets.all(16.0),
-            height: 119,
-            width: 400,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10.0),
-                image: const DecorationImage(
-                    image: AssetImage('images/atas.png'), fit: BoxFit.cover)),
+      body: screens[currentIndex],
+      bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
+        backgroundColor: Color.fromRGBO(246, 246, 246, 1),
+        selectedItemColor: Color.fromRGBO(254, 204, 118, 1),
+        unselectedItemColor: Color.fromRGBO(121, 131, 146, 1),
+        // selectedFontSize: 15,
+        currentIndex: currentIndex,
+        // showUnselectedLabels: false,
+        onTap: (index) => setState(() => currentIndex = index),
+        items: const [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
           ),
-          Container(
-            margin: EdgeInsets.all(16.0),
-            height: 450,
-            width: 400,
-            color: Colors.amber,
-            child: ListView(
-              children: const [
-                ListTile(
-                  title: Text("Proges 1"),
-                  subtitle: Text(
-                    "Proges sudah selesai",
-                    maxLines: 2,
-                    overflow: TextOverflow.ellipsis,
-                  ),
-                  trailing: Text("10.00 PM"),
-                ),
-                Divider(
-                  color: Colors.black,
-                ),
-                ListTile(
-                  title: Text("Proges 2"),
-                  subtitle: Text(
-                    "Proges sudah selesai",
-                    maxLines: 2,
-                    overflow: TextOverflow.ellipsis,
-                  ),
-                  trailing: Text("10.00 PM"),
-                ),
-                Divider(
-                  color: Colors.black,
-                ),
-                ListTile(
-                  title: Text("Proges 3"),
-                  subtitle: Text(
-                    "Proges sudah selesai",
-                    maxLines: 2,
-                    overflow: TextOverflow.ellipsis,
-                  ),
-                  trailing: Text("10.00 PM"),
-                ),
-                Divider(
-                  color: Colors.black,
-                ),
-              ],
-            ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.schedule),
+            label: 'Jadwal',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.payment),
+            label: 'Payments',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            label: 'Profile',
           ),
         ],
       ),

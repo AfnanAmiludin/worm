@@ -1,6 +1,6 @@
 {
-    "name": "woarm",
-    "short_name": "woarm",
+    "name": "worm",
+    "short_name": "worm",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

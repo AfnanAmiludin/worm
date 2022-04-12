@@ -1,4 +1,4 @@
-package com.example.woarm
+package com.example.worm
 
 import io.flutter.embedding.android.FlutterActivity
 

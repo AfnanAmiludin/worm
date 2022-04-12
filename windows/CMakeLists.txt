@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.14)
-project(woarm LANGUAGES CXX)
+project(worm LANGUAGES CXX)
 
-set(BINARY_NAME "woarm")
+set(BINARY_NAME "worm")
 
 cmake_policy(SET CMP0063 NEW)
 
