@@ -22,15 +22,16 @@ class _jadwalPageState extends State<jadwalPage> {
           margin: EdgeInsets.only(right: 16, left: 16),
           height: 50,
           width: 400,
-          color: Color.fromRGBO(246, 246, 246, 1),
+          color: Colors.white,
           alignment: Alignment.center,
           child: Text("Jadwal Kegiatan"),
+          
         ),
         Container(
           margin: EdgeInsets.only(right: 16, left: 16, bottom: 16),
           height: 450,
           width: 400,
-          color: Color.fromRGBO(246, 246, 246, 1),
+          color: Colors.white,
           child: ListView(
             children: const [
               ListTile(
