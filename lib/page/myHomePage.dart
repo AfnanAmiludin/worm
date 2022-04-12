@@ -26,7 +26,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text("WOrM"),
       ),
-      body: Column(
+      body: ListView(
         children: [
           Container(
             margin: EdgeInsets.all(16.0),
