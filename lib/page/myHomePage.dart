@@ -4,6 +4,7 @@ import 'package:worm/page/jadwalPage.dart';
 import 'package:worm/page/payment.dart';
 import 'package:worm/page/profile.dart';
 import 'package:worm/widgets/navbar.dart';
+import 'package:slide_digital_clock/slide_digital_clock.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key}) : super(key: key);
@@ -23,25 +24,43 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("WOrM"),
-      ),
       body: ListView(
-        children: [
+        children: <Widget>[
+          
           Container(
-            margin: EdgeInsets.all(16.0),
-            height: 119,
-            width: 400,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10.0),
-                image: const DecorationImage(
-                    image: AssetImage('assets/images/atas.png'),
-                    fit: BoxFit.cover)),
+            margin: EdgeInsets.only(right: 16, left: 16, top: 10),
+            child: Text("Hi, Ainul"),
+            
+          ),
+          SizedBox(
+            height: 10,
           ),
           Container(
             margin: EdgeInsets.only(right: 16, left: 16),
+
+            child: DigitalClock(
+              showSecondsDigit: false,
+              is24HourTimeFormat: false,
+              areaDecoration: BoxDecoration(
+                color: Color.fromRGBO( 47, 47, 47, 1),
+                borderRadius: BorderRadius.circular(10.0),
+              ),
+              hourMinuteDigitTextStyle: TextStyle(
+                color: Colors.white,
+                fontSize: 50,
+              ),
+              amPmDigitTextStyle: TextStyle(
+                  color: Colors.white, fontWeight: FontWeight.bold),
+            ),
+          ),
+
+          SizedBox(
+            height: 10,
+          ),
+          Container(
+            margin: EdgeInsets.only(right: 16, left: 16, ),
             height: 50,
-            width: 400,
+
             color: Colors.white,
             alignment: Alignment.center,
             child: Text("Jadwal Kegiatan"),
@@ -49,7 +68,6 @@ class _MyHomePageState extends State<MyHomePage> {
           Container(
             margin: EdgeInsets.only(right: 16, left: 16, bottom: 16),
             height: 450,
-            width: 400,
             color: Colors.white,
             child: ListView(
               children: const [
