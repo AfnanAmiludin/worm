@@ -11,11 +11,10 @@ class _profileState extends State<profile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
+      body: ListView(
         children: [
           Container(
-            height: 300,
-            width: 400,
+            height: 200,
             color: Colors.amber,
             // decoration: BoxDecoration(
             //     image: const DecorationImage(

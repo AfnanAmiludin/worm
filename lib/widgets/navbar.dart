@@ -69,9 +69,6 @@ class _navbarState extends State<navbar> {
       body: screens[currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
-        backgroundColor: Colors.blue,
-        selectedItemColor: Colors.white,
-        unselectedItemColor: Colors.amber,
         // selectedFontSize: 15,
         currentIndex: currentIndex,
         // showUnselectedLabels: false,
@@ -83,15 +80,15 @@ class _navbarState extends State<navbar> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.schedule),
-            label: 'Home',
+            label: 'Jadwal',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.payment),
-            label: 'Home',
+            label: 'Pembayaran',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
-            label: 'Home',
+            label: 'Profile',
           ),
         ],
       ),
