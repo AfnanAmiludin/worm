@@ -16,12 +16,12 @@ class _jadwalPageState extends State<jadwalPage> {
       appBar: AppBar(
         title: Text("WOrM"),
       ),
-      body: Column(children: [
+      body: ListView(children: <Widget> [
         Padding(padding: const EdgeInsets.all(16.0)),
         Container(
           margin: EdgeInsets.only(right: 16, left: 16),
           height: 50,
-          width: 400,
+
           color: Colors.white,
           alignment: Alignment.center,
           child: Text("Jadwal Kegiatan"),
@@ -30,7 +30,6 @@ class _jadwalPageState extends State<jadwalPage> {
         Container(
           margin: EdgeInsets.only(right: 16, left: 16, bottom: 16),
           height: 450,
-          width: 400,
           color: Colors.white,
           child: ListView(
             children: const [
