@@ -30,7 +30,7 @@ class _jadwalPageState extends State<jadwalPage> {
               ),
             ],
           ),
-          child: ListView(
+          child: Column(
             children: <Widget>[
               Container(
                 margin: const EdgeInsets.only(top: 15, bottom: 18),
@@ -75,7 +75,7 @@ class _jadwalPageState extends State<jadwalPage> {
                 subtitle: Text(
                   "Progres sudah selesai",
                 ),
-                trailing: Text("13.00 PM"),
+                trailing: Text("12.00 PM"),                
               ),
               const Divider(),
             ],
