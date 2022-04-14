@@ -32,7 +32,7 @@ class _MyHomePageState extends State<MyHomePage> {
             child: Text("Hi, Ainul"),
             
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Container(
@@ -45,28 +45,28 @@ class _MyHomePageState extends State<MyHomePage> {
                 color: Color.fromRGBO( 47, 47, 47, 1),
                 borderRadius: BorderRadius.circular(10.0),
               ),
-              hourMinuteDigitTextStyle: TextStyle(
+              hourMinuteDigitTextStyle: const TextStyle(
                 color: Colors.white,
                 fontSize: 50,
               ),
-              amPmDigitTextStyle: TextStyle(
+              amPmDigitTextStyle: const TextStyle(
                   color: Colors.white, fontWeight: FontWeight.bold),
             ),
           ),
 
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Container(
-            margin: EdgeInsets.only(right: 16, left: 16, ),
+            margin: const EdgeInsets.only(right: 16, left: 16, ),
             height: 50,
 
             color: Colors.white,
             alignment: Alignment.center,
-            child: Text("Jadwal Kegiatan"),
+            child: const Text("Jadwal Kegiatan"),
           ),
           Container(
-            margin: EdgeInsets.only(right: 16, left: 16, bottom: 16),
+            margin: const EdgeInsets.only(right: 16, left: 16, bottom: 16),
             height: 450,
             color: Colors.white,
             child: ListView(
@@ -81,7 +81,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   trailing: Text("10.00 PM"),
                 ),
                 Divider(
-                  color: Colors.black,
+                  color: Colors.grey,
                 ),
                 ListTile(
                   title: Text("Progres 2"),
@@ -93,7 +93,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   trailing: Text("10.00 PM"),
                 ),
                 Divider(
-                  color: Colors.black,
+                  color: Colors.grey,
                 ),
                 ListTile(
                   title: Text("Progres 3"),
@@ -105,7 +105,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   trailing: Text("10.00 PM"),
                 ),
                 Divider(
-                  color: Colors.black,
+                  color: Colors.grey,
                 ),
               ],
             ),

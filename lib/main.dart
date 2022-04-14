@@ -12,10 +12,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'WOrM - Aryak',
+      // ignore: unnecessary_new
       theme: new ThemeData(
           scaffoldBackgroundColor: const Color.fromRGBO(246, 246, 246, 1),
           fontFamily: 'Poppins'),
-      home: navbar(),
+      home: const navbar(),
       // initialRoute: '/',
       // routes: {
       //   '/': (context) => MyHomePage(),
