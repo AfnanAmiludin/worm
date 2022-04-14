@@ -69,6 +69,9 @@ class _navbarState extends State<navbar> {
       body: screens[currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
+        backgroundColor: Color.fromRGBO(246, 246, 246, 1),
+        selectedItemColor: Color.fromRGBO(254, 204, 118, 1),
+        unselectedItemColor: Color.fromRGBO(121, 131, 146, 1),
         // selectedFontSize: 15,
         currentIndex: currentIndex,
         // showUnselectedLabels: false,
